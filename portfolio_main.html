@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prachi Bera | Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fcf7f3;
+      color: #3a2b26;
+      opacity: 0;
+      animation: fadeInBody 1.5s ease-in forwards;
+    }
+
+    header {
+      background: #5a3a2e;
+      padding: 2rem;
+      color: #fff;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      letter-spacing: 1px;
+    }
+    header p {
+      font-style: italic;
+      color: #e0cfc7;
+    }
+    nav {
+      background-color: #6f4c3c;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: #f6e7da;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffd6ad;
+    }
+    section {
+      padding: 3rem 10%;
+      border-bottom: 1px solid #e2c8b8;
+    }
+    h2 {
+      border-left: 6px solid #cc9f83;
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+      color: #4a2e24;
+      font-size: 1.8rem;
+    }
+    h3{
+      color: #4a2e24;
+      font-size: 1.4rem;
+    }
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+    .about-text {
+      flex: 1;
+      min-width: 260px;
+    }
+    .about-image {
+      flex: 0 0 250px;
+      height: 250px;
+      background-color: #dec5b2;
+      border-radius: 15px;
+      background-image: url('recents.jpg');
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      background: #fff7f1;
+      margin: 0.6rem 0;
+      padding: 1rem;
+      border-left: 5px solid #d0a88c;
+      border-radius: 6px;
+      transition: transform 0.2s;
+    }
+    li:hover {
+      transform: translateX(5px);
+    }
+    .project {
+      background: #fff4ed;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.07);
+    }
+  .project:hover {
+  transform: translateY(-2px);
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.project-scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.project-scroll-container::-webkit-scrollbar-thumb {
+  background-color: #cc9f83;
+  border-radius: 4px;
+}
+
+.project {
+  flex: 0 0 400px;
+  scroll-snap-align: start;
+  background: #fff4ed;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project h3 {
+  margin-top: 0;
+  color: #4a2e24;
+}
+
+.project ul {
+  padding-left: 1.2rem;
+  list-style-type: disc;
+}
+
+
+    .contact a {
+      color: #ba6e3f;
+      text-decoration: none;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+    }
+    .cv-download {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    .cv-download a {
+      background: #8c5a3c;
+      color: #fff8f3;
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .cv-download a:hover {
+      background: #a66f51;
+    }
+    .footer {
+      background-color: #5a3a2e;
+      color: #f5eae3;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+    }
+    .fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideIn 1s ease forwards;
+}
+
+/* You can reuse this animation */
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+    @keyframes fadeInBody {
+  to {
+    opacity: 1;
+  }
+}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Prachi Bera</h1>
+  <p>Full Stack Developer | Curious Explorer | Agile Learner</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#education">Education</a>
+  <a href="#Achievements">Achievements</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about" class="fade-in-section" style="animation-delay: 1.5s;">
+  <h2>About Me</h2>
+  <div class="about-container">
+    <div class="about-text">
+      <p>Hi! I’m Prachi Bera, a Computer Science & Engineering student at JIS College of Engineering. I'm passionate about building efficient, real-world solutions through code and design. I love learning, and I follow the agile methodology: break problems into pieces and solve them with focus and speed.</p>
+      <div class="cv-download">
+        <a href="PRACHI RESUME.pdf" download>📄 Download My Resume</a>
+      </div>
+    </div>
+    <div class="about-image">
+      <!-- Replace background-image URL with actual image file -->
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="fade-in-section" style="animation-delay: 0.6s;">
+	<div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f9f9f9; padding: 40px;">
+		<h2>Skills & Abillities</h2>
+		<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+		  <!-- Left Column -->
+		  <div style="flex: 1; min-width: 300px; max-width: 500px;">
+			<!-- Java -->
+			<div style="background-color: #131325; border-radius: 15px; padding: 15px; margin-bottom: 20px; color: white;">
+			  <div style="display: flex; justify-content: space-between;">
+				<span><img src="https://img.icons8.com/ios-filled/24/ffffff/java-coffee-cup-logo.png" alt="Java" style="vertical-align: middle; margin-right: 10px;">Java</span>
+				<span>99%</span>
+			  </div>
+			  <div style="background-color: #dcdcdc; height: 8px; border-radius: 4px; margin-top: 10px;">
+				<div style="width: 99%; height: 100%; background-color: #f9c80e; border-radius: 4px;"></div>
+			  </div>
+			</div>
+	  
+			<!-- C++ -->
+			<div style="background-color: #131325; border-radius: 15px; padding: 15px; margin-bottom: 20px; color: white;">
+			  <div style="display: flex; justify-content: space-between;">
+				<span><img src="https://img.icons8.com/ios-filled/24/ffffff/code.png" alt="C++" style="vertical-align: middle; margin-right: 10px;">C++</span>
+				<span>85%</span>
+			  </div>
+			  <div style="background-color: #dcdcdc; height: 8px; border-radius: 4px; margin-top: 10px;">
+				<div style="width: 85%; height: 100%; background-color: #f9c80e; border-radius: 4px;"></div>
+			  </div>
+			</div>
+	  
+			<!-- HTML -->
+			<div style="background-color: #131325; border-radius: 15px; padding: 15px; margin-bottom: 20px; color: white;">
+			  <div style="display: flex; justify-content: space-between;">
+				<span><img src="https://img.icons8.com/ios-filled/24/ffffff/html-5.png" alt="HTML" style="vertical-align: middle; margin-right: 10px;">HTML</span>
+				<span>95%</span>
+			  </div>
+			  <div style="background-color: #dcdcdc; height: 8px; border-radius: 4px; margin-top: 10px;">
+				<div style="width: 95%; height: 100%; background-color: #f9c80e; border-radius: 4px;"></div>
+			  </div>
+			</div>
+		  </div>
+	  
+		  <!-- Right Column -->
+		  <div style="flex: 1; min-width: 300px; max-width: 500px;">
+			<!-- Next JS -->
+			<div style="background-color: #131325; border-radius: 15px; padding: 15px; margin-bottom: 20px; color: white;">
+			  <div style="display: flex; justify-content: space-between;">
+				<span><img src="https://img.icons8.com/ios-filled/24/ffffff/javascript-logo.png" alt="Next JS" style="vertical-align: middle; margin-right: 10px;">Next JS</span>
+				<span>70%</span>
+			  </div>
+			  <div style="background-color: #dcdcdc; height: 8px; border-radius: 4px; margin-top: 10px;">
+				<div style="width: 70%; height: 100%; background-color: #f9c80e; border-radius: 4px;"></div>
+			  </div>
+			</div>
+	  
+			<!-- DSA -->
+			<div style="background-color: #131325; border-radius: 15px; padding: 15px; margin-bottom: 20px; color: white;">
+			  <div style="display: flex; justify-content: space-between;">
+				<span><img src="https://img.icons8.com/ios-filled/24/ffffff/flow-chart.png" alt="DSA" style="vertical-align: middle; margin-right: 10px;">DSA</span>
+				<span>70%</span>
+			  </div>
+			  <div style="background-color: #dcdcdc; height: 8px; border-radius: 4px; margin-top: 10px;">
+				<div style="width: 70%; height: 100%; background-color: #f9c80e; border-radius: 4px;"></div>
+			  </div>
+			</div>
+	  
+			<!-- MySQL -->
+			<div style="background-color: #131325; border-radius: 15px; padding: 15px; margin-bottom: 20px; color: white;">
+			  <div style="display: flex; justify-content: space-between;">
+				<span><img src="https://img.icons8.com/ios-filled/24/ffffff/database.png" alt="MySQL" style="vertical-align: middle; margin-right: 10px;">MySQL</span>
+				<span>80%</span>
+			  </div>
+			  <div style="background-color: #dcdcdc; height: 8px; border-radius: 4px; margin-top: 10px;">
+				<div style="width: 80%; height: 100%; background-color: #f9c80e; border-radius: 4px;"></div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="project-scroll-container">
+    <div class="project">
+      <h3>TravelEase</h3>
+      <p><strong>🌐 Full Stack Travel & Traffic Assistant</strong></p>
+      <ul>
+        <li><b>Tech Stack:</b> 
+          <br>HTML, CSS, JS, Node.js, Express, MongoDB, Firebase</li>
+        <li><b>Features:</b>
+          <br> - Dynamic full stack architecture with responsive UI
+          <br> - AI powered real time traffic visualization
+          <br> - Smart itinerary suggestions based on traffic and preferences
+          <br> - Firebase-based authentication and two-step verification</li>
+        <li><a href="https://abc.github.com" target="_blank">Project Link</a></li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>TaskNest</h3>
+      <p><strong>📝 To-Do Task Manager</strong></p>
+      <ul>
+        <li><b>Tech Stack:</b>
+          <br>HTML, CSS, JavaScript</li>
+        <li><b>Features:</b>
+          <br> - Simple and minimalistic to-do app
+          <br> - Add, view, and mark tasks as complete
+          <br> - Completed tasks auto move to a separate list
+          <br> - Tasks are timestamped for easy tracking
+          </li>
+          <li><a href="https://abc.github.com" target="_blank">Project Link</a></li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3>WeatherVue</h3>
+      <p><strong>☀️ Real-Time Weather App</strong></p>
+      <ul>
+        <li><b>Tech Stack:</b>
+          <br>HTML, CSS, JavaScript, Weather API</li>
+        <li><b>Features:</b>
+          <br> - Real time weather updates and detailed forecasts
+          <br> - Fully responsive UI for all devices
+          <br> - Clean and intuitive user interface
+          </li>
+          <li><a href="https://abc.github.com" target="_blank">Project Link</a></li>
+      </ul>
+    </div>
+
+    <!-- Add more project divs here -->
+  </div>
+</section>
+
+
+<section id="education">
+  <h2>Education</h2>
+  <ul>
+    <li><strong>Bachelors In Technology</strong> - JIS College Of Engineering, Kalyani (2019-2023) | CGPA: 8.81</li>
+    <li><strong>Higher Secondary</strong> - Kendriya Vidyalaya No. 1 Kanchrapara (2020-2022) | Marks: 75.8%</li>
+    <li><strong>Secondary</strong> - Kendriya Vidyalaya No. 1 Kanchrapara (2019-2020) | Marks: 80%</li>
+  </ul>
+</section>
+
+<section id="Achievements" style="padding: 40px; background: #f9f9f9; font-family: Arial, sans-serif;">
+    <h2>Achievements & Internships</h2>
+    <div id="cert-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+      <!-- Certificates -->
+      <div class="cert-card">
+        <img src="1.png" alt="Certificate 1">
+        <button onclick="openModal('1.png')">Read More</button>
+      </div>
+      <div class="cert-card">
+        <img src="2.png" alt="Certificate 2">
+        <button onclick="openModal('2.png')">Read More</button>
+      </div>
+      <div class="cert-card">
+        <img src="3.png" alt="Certificate 3">
+        <button onclick="openModal('3.png')">Read More</button>
+      </div>
+      <div class="cert-card">
+        <img src="4.png" alt="Certificate 4">
+        <button onclick="openModal('4.png')">Read More</button>
+      </div>
+      <div class="cert-card">
+        <img src="5.png" alt="Certificate 5">
+        <button onclick="openModal('5.png')">Read More</button>
+      </div>
+  
+      <!-- Hidden certificates -->
+      <div class="cert-card hidden-cert">
+        <img src="6.png" alt="Certificate 7">
+        <button onclick="openModal('6.png')">Read More</button>
+      </div>
+      <div class="cert-card hidden-cert">
+        <img src="7.png" alt="Certificate 8">
+        <button onclick="openModal('7.png')">Read More</button>
+      </div>
+      <div class="cert-card hidden-cert">
+        <img src="8.png" alt="Certificate 9">
+        <button onclick="openModal('8.png')">Read More</button>
+      </div>
+      <div class="cert-card hidden-cert">
+        <img src="9.png" alt="Certificate 9">
+        <button onclick="openModal('9.png')">Read More</button>
+      </div>
+      <div class="cert-card hidden-cert">
+        <img src="10.png" alt="Certificate 9">
+        <button onclick="openModal('10.png')">Read More</button>
+      </div>
+    </div>
+  
+    <!-- Show More Button -->
+    <div style="text-align: center; margin-top: 30px;">
+      <button onclick="showAllCerts()" style="padding: 10px 25px; background-color: #ffc107; border: none; border-radius: 8px; font-size: 1em; cursor: pointer;">Read More</button>
+    </div>
+  </section>
+  
+  <!-- Modal -->
+  <div id="cert-modal" onclick="closeModal()" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.9); z-index: 9999; justify-content: center; align-items: center; flex-direction: column;">
+    <button onclick="closeModal()" style="position: absolute; top: 20px; right: 30px; font-size: 2em; color: white; background: none; border: none; cursor: pointer;">&times;</button>
+    <img id="modal-img" src="" alt="Full Certificate" style="width: 100vw; height: 100vh; object-fit: contain;" onclick="event.stopPropagation()">
+  </div>
+  
+  <!-- Styles -->
+  <style>
+    .cert-card {
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .cert-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .cert-card button {
+      background-color: #ffc107;
+      border: none;
+      padding: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    .hidden-cert {
+      display: none;
+    }
+  </style>
+  
+  <!-- Script -->
+  <script>
+    function openModal(imgSrc) {
+      const modal = document.getElementById('cert-modal');
+      const modalImg = document.getElementById('modal-img');
+      modal.style.display = 'flex';
+      modalImg.src = imgSrc;
+    }
+  
+    function closeModal() {
+      const modal = document.getElementById('cert-modal');
+      const modalImg = document.getElementById('modal-img');
+      modal.style.display = 'none';
+      modalImg.src = '';
+    }
+  
+    function showAllCerts() {
+      const hiddenCerts = document.querySelectorAll('.hidden-cert');
+      hiddenCerts.forEach(el => el.style.display = 'flex');
+      event.target.style.display = 'none'; // hide "Read More" button
+    }
+  </script>
+  
+  
+
+<section id = "contact" class="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:prachijio99@gmail.com">prachijio99@gmail.com</a></p>
+  <p>Phone: 6290100377</p>
+  <p>Location: Kampa, West Bengal, India - 743193</p>
+  <p>GitHub: <a href="https://github.com/prachibera" target="_blank">github.com/prachibera</a></p>
+</section>
+
+<div class="footer">
+  <p>Made with ♥ by Prachi Bera | © 2025</p>
+</div>
+
+</body>
+</html>
