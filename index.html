@@ -110,6 +110,11 @@
   transition: 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+.skill:hover {
+  transform: translateY(-8px); /* Increase upward movement */
+  transition: transform 0.7s ease-in-out, box-shadow 0.3s ease-in-out; /* Adjusted transition timing */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25); /* Stronger shadow effect */
+}
 
 .project-scroll-container {
   display: flex;
@@ -190,6 +195,9 @@
   transform: translateY(30px);
   animation: fadeSlideIn 1s ease forwards;
 }
+.white {
+    color: white;
+  }
 
 /* You can reuse this animation */
 @keyframes fadeSlideIn {
@@ -218,6 +226,7 @@
   <a href="#skills">Skills</a>
   <a href="#projects">Projects</a>
   <a href="#education">Education</a>
+  <a href="#experience">Experience</a>
   <a href="#Achievements">Achievements</a>
   <a href="#contact">Contact</a>
 </nav>
@@ -244,7 +253,7 @@
 		  <!-- Left Column -->
 		  <div style="flex: 1; min-width: 300px; max-width: 500px;">
 			<!-- Java -->
-			<div style="background-color: #131325; border-radius: 15px; padding: 15px; margin-bottom: 20px; color: white;">
+			<div class="skill" style="background-color: #131325; border-radius: 15px; padding: 15px; margin-bottom: 20px; color: white;">
 			  <div style="display: flex; justify-content: space-between;">
 				<span><img src="https://img.icons8.com/ios-filled/24/ffffff/java-coffee-cup-logo.png" alt="Java" style="vertical-align: middle; margin-right: 10px;">Java</span>
 				<span>99%</span>
@@ -255,7 +264,7 @@
 			</div>
 	  
 			<!-- C++ -->
-			<div style="background-color: #131325; border-radius: 15px; padding: 15px; margin-bottom: 20px; color: white;">
+			<div class="skill" style="background-color: #131325; border-radius: 15px; padding: 15px; margin-bottom: 20px; color: white;">
 			  <div style="display: flex; justify-content: space-between;">
 				<span><img src="https://img.icons8.com/ios-filled/24/ffffff/code.png" alt="C++" style="vertical-align: middle; margin-right: 10px;">C++</span>
 				<span>85%</span>
@@ -266,7 +275,7 @@
 			</div>
 	  
 			<!-- HTML -->
-			<div style="background-color: #131325; border-radius: 15px; padding: 15px; margin-bottom: 20px; color: white;">
+			<div class="skill" style="background-color: #131325; border-radius: 15px; padding: 15px; margin-bottom: 20px; color: white;">
 			  <div style="display: flex; justify-content: space-between;">
 				<span><img src="https://img.icons8.com/ios-filled/24/ffffff/html-5.png" alt="HTML" style="vertical-align: middle; margin-right: 10px;">HTML</span>
 				<span>95%</span>
@@ -280,7 +289,7 @@
 		  <!-- Right Column -->
 		  <div style="flex: 1; min-width: 300px; max-width: 500px;">
 			<!-- Next JS -->
-			<div style="background-color: #131325; border-radius: 15px; padding: 15px; margin-bottom: 20px; color: white;">
+			<div class="skill" style="background-color: #131325; border-radius: 15px; padding: 15px; margin-bottom: 20px; color: white;">
 			  <div style="display: flex; justify-content: space-between;">
 				<span><img src="https://img.icons8.com/ios-filled/24/ffffff/javascript-logo.png" alt="Next JS" style="vertical-align: middle; margin-right: 10px;">Next JS</span>
 				<span>70%</span>
@@ -291,7 +300,7 @@
 			</div>
 	  
 			<!-- DSA -->
-			<div style="background-color: #131325; border-radius: 15px; padding: 15px; margin-bottom: 20px; color: white;">
+			<div class="skill" style="background-color: #131325; border-radius: 15px; padding: 15px; margin-bottom: 20px; color: white;">
 			  <div style="display: flex; justify-content: space-between;">
 				<span><img src="https://img.icons8.com/ios-filled/24/ffffff/flow-chart.png" alt="DSA" style="vertical-align: middle; margin-right: 10px;">DSA</span>
 				<span>70%</span>
@@ -302,7 +311,7 @@
 			</div>
 	  
 			<!-- MySQL -->
-			<div style="background-color: #131325; border-radius: 15px; padding: 15px; margin-bottom: 20px; color: white;">
+			<div class="skill" style="background-color: #131325; border-radius: 15px; padding: 15px; margin-bottom: 20px; color: white;">
 			  <div style="display: flex; justify-content: space-between;">
 				<span><img src="https://img.icons8.com/ios-filled/24/ffffff/database.png" alt="MySQL" style="vertical-align: middle; margin-right: 10px;">MySQL</span>
 				<span>80%</span>
@@ -365,82 +374,130 @@
           <li><a href="https://abc.github.com" target="_blank">Project Link</a></li>
       </ul>
     </div>
-
     <!-- Add more project divs here -->
   </div>
 </section>
 
-
 <section id="education">
-  <h2>Education</h2>
-  <ul>
-    <li><strong>Bachelors In Technology</strong> - JIS College Of Engineering, Kalyani (2019-2023) | CGPA: 8.81</li>
-    <li><strong>Higher Secondary</strong> - Kendriya Vidyalaya No. 1 Kanchrapara (2020-2022) | Marks: 75.8%</li>
-    <li><strong>Secondary</strong> - Kendriya Vidyalaya No. 1 Kanchrapara (2019-2020) | Marks: 80%</li>
-  </ul>
+  <div style="display: flex; justify-content: flex-start; align-items: center;gap: 520px; margin-bottom: 30px;">
+    <h2 style="margin: 0; border-left: 4px solid rgb(166, 131, 101); padding-left: 10px; color: #3b2b1f;">Education</h2>
+    <h2 style="margin: 0; border-left: 4px solid rgb(166, 131, 101); padding-left: 10px; color: #3b2b1f;">Trainings</h2>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+    <!-- Education Section -->
+    <div style="flex: 1; min-width: 300px;">
+      <div class="skill" style="background:rgb(166, 131, 101); padding: 20px; margin-bottom: 20px; border-radius: 10px; color: white;">
+        <h4 style="margin: 0;">JIS College of Engineering</h4>
+        <p style="margin: 5px 0;">2022–2026</p>
+        <strong>Bachelor of Technology in CSE</strong><br>
+        <span>Maulana Abul Kalam Azad University of Technology (MAKAUT)</span>
+      </div>
+
+      <div class="skill" style="background: rgb(166, 131, 101); padding: 20px; margin-bottom: 20px; border-radius: 10px; color: white;">
+        <h4 style="margin: 0;">Kendriya Vidyalaya No-1 KPA</h4>
+        <p style="margin: 5px 0;">2021–2022</p>
+        <strong>Senior School Certificate (Class 12) Examination</strong><br>
+        <span>Central Board of Secondary Education (CBSE)</span>
+      </div>
+
+      <div class="skill" style="background: rgb(166, 131, 101); padding: 20px; border-radius: 10px; color: white;">
+        <h4 style="margin: 0;">Kendriya Vidyalaya No-1 KPA</h4>
+        <p style="margin: 5px 0;">2019–2020</p>
+        <strong>Secondary School Examination (Class 10)</strong><br>
+        <span>Central Board of Secondary Education (CBSE)</span>
+      </div>
+    </div>
+
+    <!-- Trainings Section -->
+    <div style="flex: 1; min-width: 300px;">
+      <div class="skill" style="background: rgb(166, 131, 101); padding: 20px; margin-bottom: 20px; border-radius: 10px; color: white;">
+        <h4 style="margin: 0;">Euphoria GenX</h4>
+        <p style="margin: 5px 0;">2025</p>
+        <span>Full Stack Web Development</span>
+        <br><b>Application:</b> Built a React application with MongoDB Database
+      </div>
+
+      <div class="skill" style="background: rgb(166, 131, 101); padding: 20px; margin-bottom: 20px; border-radius: 10px; color: white;">
+        <h4 style="margin: 0;">Euphoria GenX</h4>
+        <p style="margin: 5px 0;">2024</p>
+        <span>Python wih Django</span>
+        <br><b>Application:</b> Built a Learning Management System using Django 
+      </div>
+
+      <div class="skill" style="background: rgb(166, 131, 101); padding: 20px; border-radius: 10px; color: white;">
+        <h4 style="margin: 0;">Ardent Computech Pvt Ltd</h4>
+        <p style="margin: 5px 0;">2023</p>
+        <span>Inernet Of Things</span>
+        <br><b>Application:</b> Built Smart Door Lock System using Aurdino
+      </div>
+    </div>
+  </div>
 </section>
 
+
 <section id="Achievements" style="padding: 40px; background: #f9f9f9; font-family: Arial, sans-serif;">
-    <h2>Achievements & Internships</h2>
+    <h2> Achievements & Certifications
+    </h2>
+  
     <div id="cert-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
-      <!-- Certificates -->
+      <!-- First 6 visible certificates -->
       <div class="cert-card">
         <img src="1.png" alt="Certificate 1">
-        <button onclick="openModal('1.png')">Read More</button>
+        <button class="white" onclick="openModal('1.png')">SEE FULL SIZE</button>
       </div>
       <div class="cert-card">
         <img src="2.png" alt="Certificate 2">
-        <button onclick="openModal('2.png')">Read More</button>
+        <button class="white" onclick="openModal('2.png')" >SEE FULL SIZE</button>
       </div>
       <div class="cert-card">
         <img src="3.png" alt="Certificate 3">
-        <button onclick="openModal('3.png')">Read More</button>
+        <button class="white" onclick="openModal('3.png')">SEE FULL SIZE</button>
       </div>
       <div class="cert-card">
         <img src="4.png" alt="Certificate 4">
-        <button onclick="openModal('4.png')">Read More</button>
+        <button class="white" onclick="openModal('4.png')">SEE FULL SIZE</button>
       </div>
-	    </div>
-	<div class="cert-card">
+      <div class="cert-card">
         <img src="5.png" alt="Certificate 5">
-        <button onclick="openModal('5.png')">Read More</button>
+        <button class="white" onclick="openModal('5.png')">SEE FULL SIZE</button>
       </div>
   
       <!-- Hidden certificates -->
       <div class="cert-card hidden-cert">
-        <img src="6.png" alt="Certificate 7">
-        <button onclick="openModal('6.png')">Read More</button>
+        <img src="7.png" alt="Certificate 7">
+        <button class="white" onclick="openModal('7.png')">SEE FULL SIZE</button>
       </div>
       <div class="cert-card hidden-cert">
-        <img src="7.png" alt="Certificate 8">
-        <button onclick="openModal('7.png')">Read More</button>
-      </div>
-      <div class="cert-card hidden-cert">
-        <img src="8.png" alt="Certificate 9">
-        <button onclick="openModal('8.png')">Read More</button>
+        <img src="8.png" alt="Certificate 8">
+        <button class="white" onclick="openModal('8.png')">SEE FULL SIZE</button>
       </div>
       <div class="cert-card hidden-cert">
         <img src="9.png" alt="Certificate 9">
-        <button onclick="openModal('9.png')">Read More</button>
+        <button class="white" onclick="openModal('9.png')">SEE FULL SIZE</button>
       </div>
       <div class="cert-card hidden-cert">
-        <img src="10.png" alt="Certificate 9">
-        <button onclick="openModal('10.png')">Read More</button>
+        <img src="10.png" alt="Certificate 10">
+        <button class="white" onclick="openModal('10.png')">SEE FULL SIZE</button>
+        </div>
+        <div class="cert-card hidden-cert">
+        <img src="11.png" alt="Certificate 11">
+        <button class="white" onclick="openModal('11.png');">SEE FULL SIZE</button>
       </div>
+      <!-- Add more like above -->
   
     <!-- Show More Button -->
     <div style="text-align: center; margin-top: 30px;">
-      <button onclick="showAllCerts()" style="padding: 10px 25px; background-color: #ffc107; border: none; border-radius: 8px; font-size: 1em; cursor: pointer;">Read More</button>
+      <button onclick="showAllCerts()" style="padding: 10px 25px; color: white;font-weight: bold; background-color: rgb(139, 96, 57); border: none; border-radius: 8px; font-size: 1rem; cursor: pointer;">SHOW MORE</button>
     </div>
   </section>
   
-  <!-- Modal -->
-  <div id="cert-modal" onclick="closeModal()" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.9); z-index: 9999; justify-content: center; align-items: center; flex-direction: column;">
-    <button onclick="closeModal()" style="position: absolute; top: 20px; right: 30px; font-size: 2em; color: white; background: none; border: none; cursor: pointer;">&times;</button>
-    <img id="modal-img" src="" alt="Full Certificate" style="width: 100vw; height: 100vh; object-fit: contain;" onclick="event.stopPropagation()">
+  <!-- Modal to show full certificate -->
+  <div id="cert-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.8); z-index: 9999; justify-content: center; align-items: center;" onclick="closeModal()">
+    <img id="modal-img" src="" alt="Full Certificate" style="max-width: 90%; max-height: 90%; border: 5px solid white; border-radius: 10px;">
   </div>
   
-  <!-- Styles -->
+  <!-- Inline CSS for cert card -->
   <style>
     .cert-card {
       position: relative;
@@ -458,7 +515,7 @@
       object-fit: cover;
     }
     .cert-card button {
-      background-color: #ffc107;
+      background-color: rgb(139, 96, 57);
       border: none;
       padding: 10px;
       font-weight: bold;
@@ -470,37 +527,103 @@
     }
   </style>
   
-  <!-- Script -->
+  <!-- JS to handle modal and show more -->
   <script>
     function openModal(imgSrc) {
-      const modal = document.getElementById('cert-modal');
-      const modalImg = document.getElementById('modal-img');
-      modal.style.display = 'flex';
-      modalImg.src = imgSrc;
+      document.getElementById('cert-modal').style.display = 'flex';
+      document.getElementById('modal-img').src = imgSrc;
     }
-  
     function closeModal() {
-      const modal = document.getElementById('cert-modal');
-      const modalImg = document.getElementById('modal-img');
-      modal.style.display = 'none';
-      modalImg.src = '';
+      document.getElementById('cert-modal').style.display = 'none';
+      document.getElementById('modal-img').src = '';
     }
-  
     function showAllCerts() {
       const hiddenCerts = document.querySelectorAll('.hidden-cert');
       hiddenCerts.forEach(el => el.style.display = 'flex');
-      event.target.style.display = 'none'; // hide "Read More" button
+      event.target.style.display = 'none'; // hide Read More button
     }
   </script>
   
-  
+<section id="experience" style="padding: 40px; background: #fff;">
+  <h2>Experiences </h2>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;">
+    <!-- Left Column -->
+    <div style="flex: 1; min-width: 300px; background: #fdfdfd; border-radius: 15px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <!-- Experience 1 -->
+      <div style="display: flex; gap: 15px; margin-bottom: 30px;">
+        <div style="text-align: center;">
+          <div style="border: 2px dotted rgb(173, 124, 80); padding: 10px; border-radius: 50%; color: orange;">
+            <i class="fa fa-briefcase"></i>
+          </div>
+        </div>
+        <div>
+          <span style="background: rgb(173, 124, 80); color: white; font-weight: bold; padding: 3px 10px; border-radius: 15px;">APRIL 2025 – PRESENT</span>
+          <h4 style="margin: 10px 0 5px;"><strong>Full Stack Developer Virtual Internship</strong> -  Eduskill</h4>
+          <p style="margin: 0;">-Developed full-stack web applications using Java, Spring Boot,
+ HTML, CSS, and JavaScript<br>-Worked on both frontend and backend modules to build scalable
+ solutions<br>-Participated in code reviews, debugging, and version control using
+ Git</p>
+        </div>
+      </div>
+
+      <!-- Experience 2 -->
+      <div style="display: flex; gap: 15px;">
+        <div style="text-align: center;">
+          <div style="border: 2px dotted rgb(173, 124, 80); padding: 10px; border-radius: 50%; color: orange;">
+            <i class="fa fa-briefcase"></i>
+          </div>
+        </div>
+        <div>
+          <span style="background: rgb(173, 124, 80); color: white; font-weight: bold; padding: 3px 10px; border-radius: 15px;">JAN 2024 – FEB 2024</span>
+          <h4 style="margin: 10px 0 5px;"><strong>CONTENT WRITING INTERN</strong> - Marpu Foundation</h4>
+          <p style="margin: 0;">- Conceptualized & wrote social awareness content<br>- Researched social causes<br>- Collaborated on campaigns & publication</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column -->
+    <div style="flex: 1; min-width: 300px; background: #fdfdfd; border-radius: 15px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <!-- Experience 3 -->
+      <div style="display: flex; gap: 15px; margin-bottom: 30px;">
+        <div style="text-align: center;">
+          <div style="border: 2px dotted rgb(173, 124, 80); padding: 10px; border-radius: 50%; color: orange;">
+            <i class="fa fa-briefcase"></i>
+          </div>
+        </div>
+        <div>
+          <span style="background: rgb(173, 124, 80); color: white; font-weight: bold; padding: 3px 10px; border-radius: 15px;">NOV 2022 – JAN 2023</span>
+          <h4 style="margin: 10px 0 5px;"><strong>AI-ML Virtual Internship</strong> - AWS Academy</h4>
+          <p style="margin: 0;">- Built and trained ML models using AWS tools like SageMaker<br>- Applied AI/ML concepts through hands-on projects<br>- Documented and presented project outcomes effectively.</p>
+        </div>
+      </div>
+
+      <!-- Experience 4 -->
+      <div style="display: flex; gap: 15px;">
+        <div style="text-align: center;">
+          <div style="border: 2px dotted rgb(173, 124, 80); padding: 10px; border-radius: 50%; color: orange;">
+            <i class="fa fa-briefcase"></i>
+          </div>
+        </div>
+        <div>
+          <span style="background: rgb(173, 124, 80); color: white; font-weight: bold; padding: 3px 10px; border-radius: 15px;">DEC 2022 – FEB 2023</span>
+          <h4 style="margin: 10px 0 5px;"><strong>Data Engineering Virtual Internship</strong> - AWS Academy</h4>
+          <p style="margin: 0;">- Designed and managed data pipelines using AWS tools<br>- Worked with data lakes, warehouses, and ETL processes. <br>- Ensured data quality and optimized storage solutions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id = "contact" class="contact">
+<div class="about-container">
+<div class="about-text">
   <h2>Contact</h2>
-  <p>Email: <a href="mailto:prachijio99@gmail.com">prachijio99@gmail.com</a></p>
-  <p>Phone: 6290100377</p>
-  <p>Location: Kampa, West Bengal, India - 743193</p>
-  <p>GitHub: <a href="https://github.com/prachibera" target="_blank">github.com/prachibera</a></p>
+  <p><img src="https://img.icons8.com/ios-filled/24/000000/new-post.png" alt="Email" style="vertical-align: middle; margin-right: 8px;"> Email: <a href="mailto:prachijio99@gmail.com">prachijio99@gmail.com</a></p>
+  <p><img src="https://img.icons8.com/ios-glyphs/24/000000/github.png" alt="GitHub" style="vertical-align: middle; margin-right: 8px;">GitHub: <a href="https://github.com/prachibera" target="_blank">github.com/prachibera</a></p>
+  <p> <img src="https://img.icons8.com/ios-filled/24/000000/instagram-new.png" alt="Instagram" style="vertical-align: middle; margin-right: 8px;">Instagram: <a href="https://www.instagram.com/prachixb/" target="_blank">@prachixb</a></p>
+  <p><img src="https://img.icons8.com/ios-filled/24/000000/youtube-play.png" alt="YouTube" style="vertical-align: middle; margin-right: 8px;">Youtube: <a href="https://www.youtube.com/@heyimprachii" target="_blank">hey i'm prachi</a></p>
+  </div></div>
 </section>
 
 <div class="footer">
